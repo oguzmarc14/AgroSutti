@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --bg2: #f9f7f5;
+  --bg3: #f2eee9;
+  --red-dark: #8b1616;
+  --red: #c41e1e;
+  --red-light: #d63c3c;
+  --red-soft: rgba(196, 30, 30, 0.08);
+  --red-border: rgba(196, 30, 30, 0.2);
+  --red-glow: rgba(196, 30, 30, 0.25);
+  --text: #1a1a1a;
+  --text-dim: rgba(26, 26, 26, 0.64);
+  --gray: #666666;
+  --gold: #c8920a;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --max-w: 1200px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+.section {
+  position: relative;
+  padding: clamp(3rem, 7vw, 5rem) 2rem;
+}
+
+.section-inner {
+  width: min(100%, var(--max-w));
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--red);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.section-divider {
+  width: 76px;
+  height: 3px;
+  border-radius: 999px;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, var(--red-dark), var(--red-light), var(--gold));
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.section-desc {
+  max-width: 640px;
+  color: var(--text-dim);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+

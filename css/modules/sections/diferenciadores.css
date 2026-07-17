@@ -1,0 +1,50 @@
+.diferenciadores {
+  background: linear-gradient(160deg, #fdf8f8 0%, rgba(139, 22, 22, 0.06) 50%, #f9f4f4 100%);
+}
+
+.dif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+
+.dif-card {
+  padding: 2rem 1.5rem;
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(255, 245, 245, 0.9));
+  border: 1px solid rgba(196, 30, 30, 0.12);
+  box-shadow: 0 2px 16px rgba(196, 30, 30, 0.06);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.dif-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(196, 30, 30, 0.14);
+}
+
+.dif-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(196, 30, 30, 0.08);
+  color: var(--red);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.dif-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.dif-card p {
+  color: var(--text-dim);
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+

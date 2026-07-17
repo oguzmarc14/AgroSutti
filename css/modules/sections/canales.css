@@ -1,0 +1,50 @@
+.canales {
+  background: linear-gradient(180deg, #fdf3f3 0%, rgba(196, 30, 30, 0.07) 50%, #fdf2f2 100%);
+}
+
+.canales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.canal-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem 2rem;
+  border-radius: 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(255, 235, 235, 0.85));
+  border: 1.5px solid rgba(196, 30, 30, 0.22);
+  box-shadow: 0 6px 32px rgba(196, 30, 30, 0.1);
+  text-align: center;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.canal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 30, 30, 0.2);
+}
+
+.canal-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 1.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(196, 30, 30, 0.12), rgba(139, 22, 22, 0.22));
+  font-size: 2rem;
+}
+
+.canal-card h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.canal-card p {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+

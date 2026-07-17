@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* VIDEO DEL QUESO */
+.cheese-animation {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+  pointer-events: none;
+
+  object-fit: cover;
+  object-position: center center;
+
+  filter:
+    brightness(0.78)
+    contrast(1.05)
+    saturate(0.92);
+
+  animation: floatingCheese 6s ease-in-out infinite;
+}
+
+/* CONTENIDO HERO */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* GRADIENTE */
+.hero-gradient-bottom {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.42);
+  pointer-events: none;
+}
+
+/* EFECTO FLOTANTE */
+@keyframes floatingCheese {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .cheese-animation {
+    opacity: 0.9;
+  }
+}
+
+@media (max-width: 768px) {
+  .cheese-animation {
+    opacity: 0.95;
+  }
+
+  @keyframes floatingCheese {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}

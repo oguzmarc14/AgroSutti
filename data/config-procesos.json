@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "name": "AgroSutti - El Viaje del Queso Asadero",
+    "description": "Página landing interactiva mostrando los procesos de producción de queso asadero",
+    "version": "1.0.0",
+    "author": "AgroSutti S de RL de CV",
+    "created": "2024",
+    "updated": "2026-05-11"
+  },
+  "colors": {
+    "primary": "#8B1616",
+    "primary_name": "Rojo Oscuro (Logo)",
+    "secondary": "#C41E1E",
+    "secondary_name": "Rojo Claro",
+    "accent": "#D63C3C",
+    "accent_name": "Rojo Suave",
+    "light": "#F8F7F6",
+    "light_name": "Blanco Roto",
+    "dark": "#1A1A1A",
+    "dark_name": "Negro Suave",
+    "grey": "#E8E6E3",
+    "grey_name": "Gris Claro"
+  },
+  "typography": {
+    "display": "Cormorant Garamond",
+    "wide": "Agrandir",
+    "script": "Dancing Script",
+    "body": "System Font Stack"
+  },
+  "processes": [
+    {
+      "step": 1,
+      "title": "Cría de Ganado",
+      "description": "En el establo lechero Makelisa, nuestras vacas reciben cuidado especializado y condiciones óptimas para la producción de leche de la más alta calidad.",
+      "badges": ["Capacidad: 40,000 L/día", "IFS Global Food Markets Nivel 2"]
+    },
+    {
+      "step": 2,
+      "title": "Alimentación Controlada",
+      "description": "Cada animal recibe una dieta balanceada y controlada que garantiza la calidad nutricional de la leche. La consistencia en la alimentación es clave para la inocuidad del producto.",
+      "badges": ["Nutrición controlada", "Trazabilidad completa"]
+    },
+    {
+      "step": 3,
+      "title": "Limpieza e Higiene",
+      "description": "Protocolos rigurosos de limpieza en el establo y áreas de ordeño aseguran que cada gota de leche se extraiga en condiciones higiénicas óptimas.",
+      "badges": ["Protocolo ISO", "Inspección continua"]
+    },
+    {
+      "step": 4,
+      "title": "Extracción de Leche",
+      "description": "Utilizamos equipos de ordeño automatizado que minimizan el tiempo de exposición y mantienen la leche a temperatura controlada desde el primer momento.",
+      "badges": ["~20,000 L/día procesados", "Cadena de frío"]
+    },
+    {
+      "step": 5,
+      "title": "Proceso de Creación",
+      "description": "La leche se calienta y se agrega cuajo. Después de 30-40 minutos, se forma la cuajada. Este proceso es cuidadosamente monitoreado para conseguir la consistencia perfecta.",
+      "badges": ["Formulación única", "Monitoreo preciso"]
+    },
+    {
+      "step": 6,
+      "title": "Tecnología de Planta",
+      "description": "Máquinas especializadas en cuajado y fundido garantizan que cada lote cumpla con nuestros estándares. La tecnología se adapta al tipo de queso producido.",
+      "badges": ["Alta precisión", "Escalable"]
+    },
+    {
+      "step": 7,
+      "title": "Pasteurización",
+      "description": "La leche se calienta a temperatura controlada para eliminar patógenos microbiológicos, asegurando la inocuidad alimentaria sin comprometer la calidad.",
+      "badges": ["Estándares internacionales", "Inocuidad garantizada"]
+    },
+    {
+      "step": 8,
+      "title": "Corte y Moldeado",
+      "description": "La cuajada se corta en pequeños granos de tamaño uniforme. Esta precisión es fundamental para lograr la textura característica del queso asadero AgroSutti.",
+      "badges": ["Corte uniforme", "Tamaño controlado"]
+    },
+    {
+      "step": 9,
+      "title": "Desuerado y Prensado",
+      "description": "Se extrae el suero y la cuajada se prensa para alcanzar la densidad correcta. Este paso define la estructura y consistencia del producto final.",
+      "badges": ["Presión óptima", "Tiempo controlado"]
+    },
+    {
+      "step": 10,
+      "title": "Maduración y Curación",
+      "description": "El queso se almacena en condiciones controladas de temperatura y humedad. Durante este período, desarrolla su sabor característico y la consistencia perfecta para fundir.",
+      "badges": ["~30 días frescos", "~90 días semi-maduros"]
+    },
+    {
+      "step": 11,
+      "title": "Empaquetado",
+      "description": "Cada producto se empaques con cuidado, manteniendo la cadena de frío. Los empaques están diseñados para proteger la integridad del queso hasta el consumidor final.",
+      "badges": ["Etiquetado trazable", "Cadena de frío"]
+    },
+    {
+      "step": 12,
+      "title": "Distribución y Venta",
+      "description": "Nuestros productos llegan a tiendas retail, supermercados, restaurantes y directamente a puntos de venta seleccionados. La logística garantiza que el producto llegue en perfectas condiciones.",
+      "badges": ["Múltiples canales", "Puntos seleccionados"]
+    },
+    {
+      "step": 13,
+      "title": "Tu Mesa, Tu Hogar",
+      "description": "Desde el momento en que abres nuestro queso, experimentas el resultado de años de dedicación. Cada bocado refleja nuestro compromiso con la calidad y la tradición.",
+      "badges": ["Consistencia garantizada", "Sabor auténtico"]
+    }
+  ],
+  "features": {
+    "responsive": true,
+    "dark_mode": false,
+    "process_counter": false,
+    "scroll_animations": true,
+    "intersection_observer": true,
+    "parallax_effect": true,
+    "lazy_loading": true,
+    "accessibility": "WCAG 2.1 AA"
+  },
+  "seo": {
+    "title": "AgroSutti - El Viaje del Queso Asadero | Proceso de Producción",
+    "description": "Descubre todos los procesos de producción del queso asadero AgroSutti, desde la cría de ganado hasta la llegada a tu mesa.",
+    "keywords": ["queso asadero", "producción", "AgroSutti", "proceso artesanal", "comida regional"],
+    "og_image": "og-image.png"
+  },
+  "contact": {
+    "email": "agro_sutti@outlook.com",
+    "facebook": "https://www.facebook.com/AgroSutti/",
+    "instagram": "https://www.instagram.com/agrosutti/"
+  },
+  "future_enhancements": [
+    "Video de producción real",
+    "Carrusel de productos",
+    "Chat en vivo",
+    "Testimonios de clientes",
+    "Formulario de contacto",
+    "Google Analytics",
+    "Versión en inglés",
+    "Animaciones 3D con Three.js"
+  ]
+}

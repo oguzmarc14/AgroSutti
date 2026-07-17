@@ -1,0 +1,379 @@
+/* ============================================
+   AGROSUTTI — MENU PREMIUM (DARK ELEGANCE)
+   Aesthetics: Deep Black/Red, Glassmorphism, Neon/Glow Hover Animations
+   ============================================ */
+
+.menu-premium {
+  position: relative;
+  padding: clamp(5rem, 8vw, 7rem) 2rem;
+  background: linear-gradient(135deg, #090404 0%, #110505 40%, #1f0606 100%);
+  color: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.menu-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(196, 30, 30, 0.15) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.menu-premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.menu-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  position: relative;
+}
+
+.menu-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold, #C8920A);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  background: rgba(200, 146, 10, 0.1);
+  border: 1px solid rgba(200, 146, 10, 0.3);
+  box-shadow: 0 0 15px rgba(200, 146, 10, 0.2);
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.menu-title {
+  font-family: var(--serif, 'Cormorant Garamond', serif);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #ffffff, #ffdada);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(196, 30, 30, 0.3);
+}
+
+.menu-title em {
+  font-style: italic;
+  font-weight: 600;
+  color: var(--red, #C41E1E);
+  -webkit-text-fill-color: initial;
+}
+
+.menu-desc {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Category Sections */
+.menu-category {
+  max-width: var(--max-w, 1200px);
+  margin: 0 auto 6rem;
+}
+
+.menu-category-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.menu-category-title {
+  font-family: var(--serif, 'Cormorant Garamond', serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 0 20px rgba(196,30,30,0.5);
+}
+
+.menu-category-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(196,30,30,0.6), transparent);
+}
+
+/* Grid for Cards (Sections 1-7) */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Dark Premium Card Design */
+.menu-card {
+  position: relative;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red-bright, #D63C3C), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: 2;
+}
+
+.menu-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(196, 30, 30, 0);
+  transition: box-shadow 0.5s ease;
+  z-index: -1;
+}
+
+.menu-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(196, 30, 30, 0.4);
+}
+
+.menu-card:hover::before {
+  transform: translateX(100%);
+  animation: borderChaseMenu 2s linear infinite;
+}
+
+.menu-card:hover::after {
+  box-shadow: 0 0 40px 5px rgba(196, 30, 30, 0.2);
+}
+
+/* Card Image */
+.menu-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-card-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(17, 8, 8, 1) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.menu-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: brightness(0.9);
+}
+
+.menu-card:hover .menu-card-img {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(1.1);
+}
+
+/* Card Content */
+.menu-card-content {
+  padding: 1.5rem 2rem 2.5rem;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.menu-card-title {
+  font-family: var(--serif, 'Cormorant Garamond', serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.menu-card-price {
+  font-family: var(--sans, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold, #C8920A);
+  background: rgba(200, 146, 10, 0.1);
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(200, 146, 10, 0.2);
+  white-space: nowrap;
+}
+
+.menu-card-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.menu-card-options {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-option {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.menu-option-name {
+  font-weight: 400;
+}
+
+.menu-option-price {
+  font-weight: 600;
+  color: var(--red-light, #D63C3C);
+}
+
+.menu-small-text {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* List Layout for Sections 8-10 (No images) */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem 3rem;
+}
+
+.menu-list-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-list-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--red, #C41E1E);
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+.menu-list-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(196, 30, 30, 0.3);
+  box-shadow: 0 5px 20px rgba(196, 30, 30, 0.1);
+  transform: translateX(5px);
+}
+
+.menu-list-item:hover::before {
+  transform: scaleY(1);
+}
+
+.menu-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.menu-list-title {
+  font-family: var(--serif, 'Cormorant Garamond', serif);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.menu-list-price {
+  font-family: var(--sans, 'Inter', sans-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold, #C8920A);
+}
+
+.menu-list-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+}
+
+.menu-list-options {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.menu-list-options span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.2rem;
+}
+
+@keyframes borderChaseMenu {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@media (max-width: 768px) {
+  .menu-premium {
+    padding: 4rem 1.5rem;
+  }
+  .menu-category-title {
+    font-size: 2rem;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+}
