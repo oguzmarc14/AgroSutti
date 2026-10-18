@@ -168,3 +168,11 @@
   margin-top: 0.2rem;
 }
 
+
+/* Center the introduction higher in the viewport on desktop screens. */
+@media (min-width: 1024px) {
+  .hero {
+    align-items: center;
+    padding: 7rem 2rem 5rem;
+  }
+}
