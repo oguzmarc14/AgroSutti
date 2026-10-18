@@ -105,3 +105,26 @@
   .granja-stat-value { text-align: left; }
   .dif-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+    gap: 1rem;
+  }
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: none;
+    min-height: 52px;
+    padding: 0.9rem 1rem;
+    line-height: 1.4;
+  }
+  /* Keep buttons aligned when a mouse is used in a narrow viewport, too. */
+  .btn { transform: none !important; }
+  .estacion-detail { max-width: 100%; align-items: flex-start; }
+  .estacion-detail > span:first-child { flex-shrink: 0; }
+  .estacion-detail a { min-width: 0; overflow-wrap: anywhere; }
+}
