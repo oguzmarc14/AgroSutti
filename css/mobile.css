@@ -48,7 +48,8 @@
   .hero {
     min-height: 100vh;
     min-height: 100svh;
-    padding: 7rem 1.25rem 2.5rem;
+    align-items: center;
+    padding: 7rem 1.25rem 6rem;
   }
   .hero-content { width: 100%; padding-bottom: 0; }
   .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.13em; }
