@@ -128,3 +128,31 @@
   .estacion-detail > span:first-child { flex-shrink: 0; }
   .estacion-detail a { min-width: 0; overflow-wrap: anywhere; }
 }
+
+@media (max-width: 768px) {
+  .section-label,
+  .section-title,
+  .section-desc { text-align: center; }
+  .section-label { display: block; }
+  .section-divider { margin-inline: auto; }
+  .section-desc { margin-inline: auto; }
+
+  .hero-copy, .highlight-card { text-align: center; }
+  .hero-copy .eyebrow { margin-inline: auto; }
+
+  .estacion-info { text-align: center; }
+  .estacion-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+  .estacion-detail { justify-content: center; text-align: center; }
+  .estacion-info > .btn {
+    display: flex;
+    width: 100%;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+}
