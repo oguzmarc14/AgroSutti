@@ -1,0 +1,107 @@
+/* Mobile adjustments are loaded last to preserve the desktop layout. */
+@media (max-width: 768px) {
+  .section,
+  .intro-section,
+  .menu-premium {
+    padding-inline: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .main-nav,
+  .main-nav.scrolled {
+    padding: 0.65rem 1rem;
+  }
+
+  .nav-logo img { height: 40px; }
+  .nav-logo span { font-size: 1.2rem; }
+  .hamburger {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+    align-items: center;
+    top: max(0.65rem, env(safe-area-inset-top)) !important;
+    right: max(1rem, env(safe-area-inset-right)) !important;
+  }
+
+  /* A filtered ancestor would constrain the fixed, full-screen menu. */
+  body.menu-open .main-nav {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .nav-links {
+    width: 100% !important;
+    height: 100vh !important;
+    min-height: 0 !important;
+    height: 100dvh !important;
+    justify-content: flex-start !important;
+    padding: calc(4.5rem + env(safe-area-inset-top))
+      max(1rem, env(safe-area-inset-right))
+      calc(1.5rem + env(safe-area-inset-bottom))
+      max(1rem, env(safe-area-inset-left)) !important;
+    overscroll-behavior: contain;
+  }
+
+  .nav-links > a { flex-shrink: 0; }
+  .nav-links > a:first-child { margin-top: auto; }
+  .nav-links > a:last-child { margin-bottom: auto; }
+
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 7rem 1.25rem 2.5rem;
+  }
+  .hero-content { width: 100%; padding-bottom: 0; }
+  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.13em; }
+  .hero h1 { font-size: clamp(2.5rem, 9vw, 4rem); }
+  .hero-sub { margin-bottom: 1.75rem; }
+  .hero-buttons, .cta-buttons { align-items: center; }
+  .btn { min-height: 48px; white-space: normal; text-align: center; }
+
+  .reveal-left, .reveal-right { transform: translateY(24px); }
+  .reveal-left.active, .reveal-right.active { transform: none; }
+
+  .hero-panel > *,
+  .estacion-grid > *,
+  .footer-inner > *,
+  .menu-card-header > *,
+  .granja-card-header > * { min-width: 0; }
+
+  .productos-grid,
+  .timeline-grid,
+  .canales-grid,
+  .granja-grid,
+  .menu-grid,
+  .menu-list { grid-template-columns: minmax(0, 1fr); }
+
+  .granja-card, .canal-card, .timeline-card { padding: 1.5rem; }
+  .granja-card-icon { flex-shrink: 0; }
+  .granja-stat-item { align-items: flex-start; gap: 1rem; }
+  .granja-stat-value { text-align: right; overflow-wrap: anywhere; }
+  .estacion-img { min-height: 240px; }
+
+  .stats-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; padding: 1.5rem 1rem; }
+  .stat { min-width: 0; }
+  .stat-number { font-size: clamp(2rem, 7vw, 3rem); }
+  .stat-label { font-size: 0.7rem; letter-spacing: 0.04em; overflow-wrap: anywhere; }
+
+  .menu-header { margin-bottom: 3rem; }
+  .menu-category-header { gap: 0.75rem; }
+  .menu-category-title { white-space: normal; font-size: clamp(1.6rem, 6vw, 2rem); }
+  .menu-card-content { padding: 1.25rem; }
+  .menu-card-header, .menu-list-header { flex-wrap: wrap; gap: 0.5rem 1rem; }
+  .menu-card-title, .menu-list-title { overflow-wrap: anywhere; }
+  .menu-card-price, .menu-list-price { flex-shrink: 0; }
+  .menu-option, .menu-list-options span { flex-wrap: wrap; gap: 0.25rem 1rem; }
+  .menu-option-price { white-space: nowrap; margin-left: auto; }
+  .menu-list-item { min-width: 0; }
+
+  .footer-brand { flex-wrap: wrap; }
+  .footer-links a { padding-block: 0.5rem; }
+}
+
+@media (max-width: 380px) {
+  .hero-buttons .btn, .cta-buttons .btn { max-width: 100%; padding-inline: 1rem; }
+  .granja-stat-item { flex-wrap: wrap; gap: 0.25rem; }
+  .granja-stat-value { text-align: left; }
+  .dif-grid { grid-template-columns: minmax(0, 1fr); }
+}
